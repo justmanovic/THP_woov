@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+html{
+  font-size: 85%;
+}
+
 body{
   font-family: Roboto;
   color: rgb(34, 34, 34);
@@ -51,7 +55,7 @@ h4{
 .logo{
   font-family: 'Baloo 2';
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 5rem;
   color: white;
 }
 
@@ -62,7 +66,7 @@ h4{
   justify-content: space-between;
   color: white;
   font-size: 1.5rem;
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
 }
 
 .nav-link,
@@ -86,34 +90,38 @@ h4{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 55%;
+  /* width: 55%; */
   height: 5rem;
   background-color: white;
   border-radius:3rem;
   padding: 1rem;
-  max-width: 35rem;
-}
-
-.search span{
-  color: black;
+  max-width: 50rem;
+  margin-top: 1rem;
 }
 
 input{
   border: none;  
   outline: none;
-  padding: 0.5rem;
+  /* padding: 0.5rem; */
   font-family: inherit;
-  font-size: 1rem;
 }
 
-.search input {
+.bordure{
+  width: 1px;
+  height: 32px;
+  background-color: rgb(233, 233, 233);
+}
+
+
+
+/* .search input {
   flex: 1;
 }
 
 .champs-recherche{
-  /* border: 1px dotted red; */
-  flex: 3;
-}
+   border: 1px dotted red; 
+   flex: 1;
+}  */
 
 .champs-date{
   /* border: 1px dotted blue; */
@@ -132,18 +140,25 @@ input{
   font-size: 1.55rem;
   font-family: 'Baloo 2';
   font-weight: bolder;
+  transition: .2s all;
+
 }
 
 .btn:hover{
   opacity: 0.85;
+  transform: translateY(-3px);
+}
+
+.btn:active{
+  transform: translateY(-0px);
+
 }
 
 .btn-search{
   border-radius: 40rem;
   font-family: inherit;
   /* margin: .25rem; */
-  background-color: #7CA980;
-  transition: .5s all;
+  background-color: #BEE3DB;
   /* width: 1rem; */
 }
 
@@ -169,6 +184,12 @@ input{
 .img-div{
   width: 5rem;
   height: 5rem;
+  transition: .25s all;
+}
+
+.img-div:hover{
+  opacity: .9;
+  transform: scale(1.05);
 }
 
 .img-div img{
@@ -209,7 +230,6 @@ section:first-of-type{
 }
 
 section h3{
-  align-self: flex-start;
   margin-bottom: 2rem;
 }
 
@@ -320,11 +340,21 @@ section h3{
   gap: 2rem;
 }
 
-.vous-etes>div{
-  display: flex;
+
+
+.vous-etes>.categorie{
+  display:flex;
   flex-direction: column;
   align-items: center;
-  width: 30%;
+  width: 25%;
+  justify-content: space-between;
+  height: 23rem;
+}
+
+.bordure-2{
+  width: 1px;
+  height:25rem;
+  background-color: #BEE3DB
 }
 
 .vous-etes>*{
@@ -337,4 +367,67 @@ section h3{
 
 .footer-top{
   display: flex;
+  justify-content: space-evenly;
+  background-color: #BEE3DB ;
+  padding: 7.5rem 0;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-top h4{
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+li{
+  list-style: none;
+}
+
+.footer-top ul li{
+  margin-bottom: .25rem;
+  font-size: .85rem;
+}
+
+.footer-top >*{
+  /* border: 1px white solid; */
+}
+
+.footer-top h2{
+  font-family: 'Baloo 2';
+  display: block;
+  align-self: center;
+}
+
+.footer-bottom{
+  padding: 1rem 0;
+}
+
+.footer-bottom ul{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer a:hover{
+  text-decoration: underline;
+}
+
+footer i{
+  transition: .5s all;
+}
+
+footer i:hover{
+  transform: scale(1.1);
+}
+
+p{
+  line-height: 150%;
+  letter-spacing: 1px;
+}
+
+.follow div{
+  display: flex;
+  justify-content: space-evenly;
 }
